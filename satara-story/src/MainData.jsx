@@ -1,6 +1,6 @@
 // MainData.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   FaClock,
   FaPen,
@@ -38,7 +38,6 @@ import {
   FaLightbulb,
   FaHeadset,
   FaTrashAlt,
-  FaTint,
   FaBriefcase,
   FaBus,
   FaBusAlt,
@@ -167,6 +166,8 @@ function MainData() {
     { key: 'museums', label: 'संग्रहालये' },
   ];
 
+
+
   // Handler: Market prices
   const fetchMarketPrices = async () => {
     setAgriLoading(true);
@@ -243,12 +244,16 @@ function MainData() {
     }, 700);
   };
 
+
+
+
   return (
     <main className="container mx-auto px-4 py-6">
 
       {/* ============ TOP GRID: Featured + Panchang ============ */}
       <div className="flex flex-col lg:flex-row gap-6 mb-8">
 
+        {/* LEFT: Featured Hero (2/3) */}
         {/* LEFT: Featured Hero (2/3) */}
         <div className="lg:w-2/3 relative group rounded-lg overflow-hidden shadow-lg bg-white">
           <Link to="/news/featured">
@@ -287,7 +292,7 @@ function MainData() {
           <div className="bg-orange-50 rounded-lg shadow-sm border border-orange-200 p-4">
             <div className="flex justify-between items-center mb-2 border-b border-orange-200 pb-2">
               <h3 className="text-lg font-bold text-orange-800 flex items-center gap-2">
-                <FaOm className="text-orange-600" /> आजचे पंचांग
+                <FaOm className="text-satara-orange" /> आजचे पंचांग
               </h3>
               <span className="text-xs bg-orange-200 text-orange-800 px-2 py-1 rounded">
                 २२ सप्टेंबर
@@ -460,7 +465,7 @@ function MainData() {
 
       {/* ============ AD BANNER ============ */}
       <div className="w-full flex justify-center mb-10">
-        <div className="w-full max-w-4xl h-[90px] md:h-[120px] flex items-center justify-center border border-dashed border-gray-300 text-gray-400 bg-gray-50 rounded">
+        <div className="w-full max-w-4xl h-[90px] md:h-[120px] flex bg-gray-200 items-center justify-center border border-dashed border-gray-300 text-gray-400 bg-gray-50 rounded">
           Advertisement (Responsive AdSense)
         </div>
       </div>
@@ -932,11 +937,10 @@ function MainData() {
                 <button
                   key={tab.key}
                   onClick={() => setTourismTab(tab.key)}
-                  className={`px-4 py-1 rounded-full text-sm font-semibold transition shadow-sm ${
-                    tourismTab === tab.key
-                      ? 'bg-indigo-600 text-white'
-                      : 'bg-white text-indigo-600 border border-indigo-200 hover:bg-indigo-50'
-                  }`}
+                  className={`px-4 py-1 rounded-full text-sm font-semibold transition shadow-sm ${tourismTab === tab.key
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white text-indigo-600 border border-indigo-200 hover:bg-indigo-50'
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -1198,7 +1202,6 @@ function MainData() {
 
         </div>
       </section>
-
     </main>
   );
 }

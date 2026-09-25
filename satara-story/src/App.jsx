@@ -9,8 +9,8 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <MainData/>
-        <Footer/>
+        <MainData />
+        <Footer />
       </BrowserRouter>
     </>)
 }

@@ -6,6 +6,7 @@ import {
   GoCloud,
 } from "react-icons/go";
 import { FaNewspaper, FaLandmark, FaMapMarkerAlt, FaTractor, FaChartLine, FaFutbol, FaFilm, FaCamera, FaBars, FaFacebookF, FaYoutube, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaPenNib } from "react-icons/fa";
 
 function Header() {
   return (
@@ -25,7 +26,7 @@ function Header() {
               </span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link to="/epaper" className="text-satara-red hover:text-red-700 font-semibold flex items-center gap-1">
+              <Link to="/epaper" className="text-satara-red  font-semibold flex items-center gap-1">
                 <FaNewspaper /> E-Paper
               </Link>
               <div className="flex space-x-3">
@@ -35,12 +36,12 @@ function Header() {
                 <a href="https://www.youtube.com/@satarastory6110" target="_blank" rel="noreferrer" className="text-red-600 hover:text-red-800">
                   <FaYoutube />
                 </a>
-                <a href="#" className="text-pink-600 hover:text-pink-800">
+                <Link to="/instagram-account" className="text-pink-600 hover:text-pink-800">
                   <FaInstagram />
-                </a>
-                <a href="#" className="text-green-500 hover:text-green-700">
+                </Link>
+                <Link to="whatsapp" className="text-green-500 hover:text-green-700">
                   <FaWhatsapp />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -58,10 +59,10 @@ function Header() {
                   className="h-16 w-16 mr-2 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
-                  <div className="flex text-4xl font-black tracking-tight">
+                  <div className="flex items-center text-4xl font-black tracking-tight">
                     <span className="text-satara-red uppercase">Satara</span>
-                    <span className="text-satara-dark mx-1 text-3xl">
-                      <i className="fas fa-pen-nib"></i>
+                    <span className="text-satara-dark mx-2 flex items-center">
+                      <FaPenNib size={32} className="mt-1" />
                     </span>
                     <span className="text-satara-blue uppercase">Story</span>
                   </div>
@@ -74,7 +75,7 @@ function Header() {
 
             {/* Ad Banner */}
             <div className="hidden lg:block">
-              <div className="ad-banner w-[728px] h-[90px] flex items-center justify-center border border-dashed border-gray-300 text-gray-400">
+              <div className="ad-banner w-[728px] h-[90px] flex items-center justify-center border border-dashed border-gray-300 bg-gray-200 text-gray-500">
                 Advertisement (728x90)
               </div>
             </div>

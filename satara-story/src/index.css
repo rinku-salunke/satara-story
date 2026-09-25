@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-dark-navy-blue: #000080;
-    --color-satara-red:#FB2C36;
-    --color-satara-dark:#000000;
-    --color-white:#FFFFFF;
-}
+  --color-dark-navy-blue: #000080;
+  --color-satara-red: #FB2C36;
+  --color-satara-dark: #000000;
+  --color-white: #FFFFFF;
+  --color-satara-orange: #FF4500;
 
+}
 @keyframes ticker {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -19,4 +21,3 @@
 .animate-ticker {
   animation: ticker 5s linear infinite;
 }
-
